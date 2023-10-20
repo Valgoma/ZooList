@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,10 +8,10 @@ public class Main {
         for (Lion l: lions) {
             l.ohota(girfs);
         }
-        merge(seals,lions,girfs);
-        System.out.println(merge(seals,lions,girfs));
-
+        var mammals = merge(seals,lions,girfs); //автоматический выбор типа для ссылочной переменной
+        System.out.println(mammals);
     }
+
         private static ArrayList<Seal> collectSeals(int n) {
             ArrayList<Seal> seals = new ArrayList<>();
             for (int i=0; i<n; i++)
@@ -43,9 +42,9 @@ public class Main {
 
         return girfs;
     }
-    public static ArrayList<Object> merge(ArrayList<Seal> seals, ArrayList<Lion> lions, ArrayList<Giraffe> girfs)
+    public static ArrayList<Mammal> merge(ArrayList<Seal> seals, ArrayList<Lion> lions, ArrayList<Giraffe> girfs)
     {
-        ArrayList<Object> list = new ArrayList<>();
+        ArrayList<Mammal> list = new ArrayList<>();
 
         list.addAll(seals);
         list.addAll(lions);
