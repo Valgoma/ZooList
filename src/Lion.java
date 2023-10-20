@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Lion extends Mammals{
+public class Lion extends Mammal {
     public Lion(String name) {
         super(name);
     }
-    public ArrayList<Giraffe> ohota (ArrayList<Giraffe> girfs)
+    public void ohota (ArrayList<Giraffe> girfs)
     {
         Random ran = new Random();
-        int k= ran.nextInt(5);
+        int k= ran.nextInt(girfs.size());
+        System.out.println("пойман жираф "+girfs.get(k));
         girfs.remove(k);
-        return girfs;
+        //return girfs;
     }
 }

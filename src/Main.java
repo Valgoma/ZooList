@@ -3,9 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Seal> seals = collectSeals();
-        ArrayList<Lion> lions = collectLions();
-        ArrayList<Giraffe> girfs = collectGirfs();
+        ArrayList<Seal> seals = collectSeals(3);
+        ArrayList<Lion> lions = collectLions(2);
+        ArrayList<Giraffe> girfs = collectGirfs(5);
         for (Lion l: lions) {
             l.ohota(girfs);
         }
@@ -13,9 +13,9 @@ public class Main {
         System.out.println(merge(seals,lions,girfs));
 
     }
-        private static ArrayList<Seal> collectSeals() {
+        private static ArrayList<Seal> collectSeals(int n) {
             ArrayList<Seal> seals = new ArrayList<>();
-            for (int i=0; i<3; i++)
+            for (int i=0; i<n; i++)
                 {
                 Seal s = new Seal("Котик"+i);
                     seals.add(s);
@@ -23,9 +23,9 @@ public class Main {
 
             return seals;
         }
-    private static ArrayList<Lion> collectLions() {
+    private static ArrayList<Lion> collectLions(int n) {
         ArrayList<Lion> lions = new ArrayList<>();
-        for (int i=0; i<2; i++)
+        for (int i=0; i<n; i++)
         {
             Lion l = new Lion("Лев"+i);
             lions.add(l);
@@ -33,9 +33,9 @@ public class Main {
 
         return lions;
     }
-    private static ArrayList<Giraffe> collectGirfs() {
+    private static ArrayList<Giraffe> collectGirfs(int n) {
         ArrayList<Giraffe> girfs = new ArrayList<>();
-        for (int i=0; i<5; i++)
+        for (int i=0; i<n; i++)
         {
             Giraffe g = new Giraffe("Жираф"+i);
             girfs.add(g);
