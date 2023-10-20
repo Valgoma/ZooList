@@ -27,6 +27,7 @@ public class Main {
         for (int i=0; i<n; i++)
         {
             Lion l = new Lion("Лев"+i);
+            l.giveName();
             lions.add(l);
         }
 
